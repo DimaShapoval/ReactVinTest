@@ -26,8 +26,9 @@ export default function HomePageContainer() {
         getData()
     }, []);
 
-    async function getData() {        
-        setRecentlyVins(JSON.parse(localStorage?.recentlyVins));
+    async function getData() {
+        let newData = localStorage?.recentlyVins ? localStorage?.recentlyVins : undefined;        
+        setRecentlyVins(JSON.parse(newData));
     }
 
     function sendRecentlyVins(vinCode) { // set new data of recently vin codes that was searched
