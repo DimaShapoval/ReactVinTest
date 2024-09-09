@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { NavLink, Route, Routes } from 'react-router-dom';
+import HomePageContainer from './HomePage/HomePageContainer';
+import VariablesContainer from './Variables/VariablesContainer';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App container">
+        <header>
+          <NavLink to={'/'} >VIN DECODER</NavLink>
+          <NavLink to={'/variables'} >Variables</NavLink>
+        </header>
+        <main className='container' >
+            <Routes>
+              <Route path='/' element={<HomePageContainer />} />
+              <Route path='/variables/*' element={<VariablesContainer />} />
+            </Routes>
+        </main>
+      </div>
+
   );
 }
 

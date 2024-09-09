@@ -1,0 +1,50 @@
+.wrapper{
+    width: 90%;
+    flex-direction: column;
+}
+
+.wrapper > h3 {
+    width: 95%;
+}
+
+.infoWrapper{
+    width: 80%;
+}
+
+.infoWrapper > p{
+    font-weight: bold;
+}
+
+.infoWrapper > p > span{
+    font-weight: 400;
+}
+
+.description{
+    align-items: baseline;
+    justify-content: start;
+    font-weight: bold;
+}
+
+.description > div{
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 650px) {
+    .wrapper{
+        width: 100%;
+    }
+    .infoWrapper{
+        width: 95%;
+    }
+    .description{
+        flex-direction: column;
+        width: 100%;
+    }
+    .description > div{
+        display: flex;
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+    }
+}

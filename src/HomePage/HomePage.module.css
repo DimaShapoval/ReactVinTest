@@ -1,0 +1,65 @@
+.wrapper{
+    flex-direction: column;
+}
+
+.errorMessage{
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 260px;
+}
+
+.formInput{
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid grey
+}
+
+.errorInput{
+    border: 1px solid red;
+}
+
+.submitButton{
+    background-color: rgb(56, 234, 175);
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+}
+
+.recentListWrapper{
+    width: 90%;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.recentList div{
+    /* background-color: rgb(154, 197, 240); */
+    list-style-type: none;
+    border: 1px solid black;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.recentList{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem
+}
+
+.searchVin{
+    width: 90%;
+    color: black;
+
+}

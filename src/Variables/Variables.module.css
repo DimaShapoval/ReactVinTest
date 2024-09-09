@@ -1,0 +1,33 @@
+.cards {
+    width: 90%;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem
+}
+
+.card {
+    background-color: rgb(154, 197, 240);
+    padding: 1rem;
+    text-align: center;
+}
+
+.card a{
+    color: rgb(65, 64, 64);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.errorMessage{
+    color: red;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.errorMessage span {
+    content: '✖';
+    margin-left: 10px; 
+    color: red; 
+    cursor: pointer; 
+}
