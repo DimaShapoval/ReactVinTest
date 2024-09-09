@@ -12,9 +12,10 @@ export default function VariablesContainer() {
     const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
+        setLoader(true)
+        // take all variables
         axios.get('https://vpic.nhtsa.dot.gov/api/vehicles/getvehiclevariablelist?format=json')
         .then(res => {
-            setLoader(true)
             let data = res.data
             setVariablesList(data.Results)
         })
@@ -26,9 +27,9 @@ export default function VariablesContainer() {
         })
     }, [])
 
-    const getCurrentVariableInfo = (id) => {        
+    const getCurrentVariableInfo = (id) => { // function of find variables that user navigate      
         let currentVariableInfo = variablesList.find(item => item.ID === Number(id));
-        return currentVariableInfo
+        return currentVariableInfo;
         
     }
 

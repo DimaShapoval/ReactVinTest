@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import style from './Variables.module.css'
+
+
 export default function Variables({ variablesList }) {
     return (
         <div className={style.cards} >

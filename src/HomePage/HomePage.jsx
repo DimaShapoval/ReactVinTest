@@ -14,12 +14,16 @@ export default function HomePage({ register,
         <>
             <div className={`container ${style.recentListWrapper}`} >
                 <p style={{marginRight: "15px"}} >Recently Found VIN's:</p>
-                {recentlyVins ? <div className={`container ${style.recentList}`} >
-                    {recentlyVins.map((item, index) => <div
+                {
+                recentlyVins ? <div className={`container ${style.recentList}`} >
+                    {
+                    recentlyVins.map((item, index) => <div
                         style={{ cursor: 'pointer' }}
                         key={index}
-                        onClick={() => onSubmit({ vinCode: item.code })}
-                    >{item.code}</div>)}
+                        onClick={() => onSubmit({ vinCode: item.code })
+                    }
+                    >{item.code}</div>)
+                    }
                 </div> : null}
             </div>
             <div className={`container`} style={{width: '80%', marginTop: '1rem'}} >

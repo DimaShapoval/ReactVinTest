@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import style from './VariablesInfo.module.css'
 import { useParams } from 'react-router-dom';
+
+
 export default function VariablesInfo({ variablesList, getCurrentVariableInfo }) {
     const [variableInfo, setVariableInfo] = useState(null);
     const { variablesId } = useParams();
